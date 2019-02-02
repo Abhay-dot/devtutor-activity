@@ -1,5 +1,6 @@
 import logging
-import os, sys
+import os
+import sys
 
 sys.path.append(os.path.join(os.environ['SUGAR_BUNDLE_PATH'], 'epubview'))
 import epubview
@@ -29,7 +30,7 @@ class View(epubview.EpubView):
 
     def set_current_page(self, n):
         # When the book is being loaded, calling this does not help
-        # In such a situation, we go into a loop and try to load the 
+        # In such a situation, we go into a loop and try to load the
         # supplied page when the book has loaded completely
         n += 1
         if self._ready:
@@ -40,7 +41,7 @@ class View(epubview.EpubView):
     def get_current_page(self):
         return int(self._loaded_page - 1)
 
-    def find_changed(self, job, page = None):
+    def find_changed(self, job, page=None):
         self._find_changed(job)
 
     def handle_link(self, link):
@@ -68,6 +69,17 @@ class EpubDocument(epubview.Epub):
 
 class JobFind(epubview.JobFind):
 
-    def __init__(self, document, start_page, n_pages, text, case_sensitive=False):
-        epubview.JobFind.__init__(self, document, start_page, n_pages, text, case_sensitive=False)
-
+    def __init__(
+        self,
+        document,
+     start_page,
+     n_pages,
+     text,
+     case_sensitive=False):
+        epubview.JobFind.__init__(
+            self,
+            document,
+            start_page,
+            n_pages,
+            text,
+            case_sensitive=False)

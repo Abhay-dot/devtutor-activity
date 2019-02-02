@@ -65,23 +65,23 @@ class EditToolbar(Gtk.Toolbar):
         undo = UndoButton(sensitive=False)
         undo.connect('clicked', lambda button: pc.abiword_canvas.undo())
         pc.abiword_canvas.connect("can-undo", lambda abi, can_undo:
-                undo.set_sensitive(can_undo))
+                                  undo.set_sensitive(can_undo))
         self.insert(undo, -1)
         undo.show()
 
         redo = RedoButton(sensitive=False)
         redo.connect('clicked', lambda button: pc.abiword_canvas.redo())
         pc.abiword_canvas.connect("can-redo", lambda abi, can_redo:
-                redo.set_sensitive(can_redo))
+                                  redo.set_sensitive(can_redo))
         self.insert(redo, -1)
         redo.show()
 
         pc.abiword_canvas.connect('text-selected', lambda abi, b:
-                copy.set_sensitive(True))
+                                  copy.set_sensitive(True))
         pc.abiword_canvas.connect('image-selected', lambda abi, b:
-                copy.set_sensitive(True))
+                                  copy.set_sensitive(True))
         pc.abiword_canvas.connect('selection-cleared', lambda abi, b:
-                copy.set_sensitive(False))
+                                  copy.set_sensitive(False))
 
         separator = Gtk.SeparatorToolItem()
         self.insert(separator, -1)
@@ -133,7 +133,7 @@ class EditToolbar(Gtk.Toolbar):
 
     def _search_entry_changed_cb(self, entry):
         logger.debug('_search_entry_changed_cb search for \'%s\'',
-                self._search_entry.props.text)
+                     self._search_entry.props.text)
 
         if not self._search_entry.props.text:
             self._search_entry.activate()
@@ -198,26 +198,26 @@ class InsertToolbar(Gtk.Toolbar):
 
         self._table_rows_after = ToolButton('row-insert')
         self._table_rows_after.set_tooltip(_('Insert Row'))
-        self._table_rows_after_id = self._table_rows_after.connect( \
-                'clicked', self._table_rows_after_cb)
+        self._table_rows_after_id = self._table_rows_after.connect(
+            'clicked', self._table_rows_after_cb)
         self.insert(self._table_rows_after, -1)
 
         self._table_delete_rows = ToolButton('row-remove')
         self._table_delete_rows.set_tooltip(_('Delete Row'))
-        self._table_delete_rows_id = self._table_delete_rows.connect( \
-                'clicked', self._table_delete_rows_cb)
+        self._table_delete_rows_id = self._table_delete_rows.connect(
+            'clicked', self._table_delete_rows_cb)
         self.insert(self._table_delete_rows, -1)
 
         self._table_cols_after = ToolButton('column-insert')
         self._table_cols_after.set_tooltip(_('Insert Column'))
-        self._table_cols_after_id = self._table_cols_after.connect( \
-                'clicked', self._table_cols_after_cb)
+        self._table_cols_after_id = self._table_cols_after.connect(
+            'clicked', self._table_cols_after_cb)
         self.insert(self._table_cols_after, -1)
 
         self._table_delete_cols = ToolButton('column-remove')
         self._table_delete_cols.set_tooltip(_('Delete Column'))
-        self._table_delete_cols_id = self._table_delete_cols.connect( \
-                'clicked', self._table_delete_cols_cb)
+        self._table_delete_cols_id = self._table_delete_cols.connect(
+            'clicked', self._table_delete_cols_cb)
         self.insert(self._table_delete_cols, -1)
 
         separator = Gtk.SeparatorToolItem()
@@ -271,7 +271,8 @@ class ViewToolbar(Gtk.Toolbar):
 
         self._zoom_out = ToolButton('zoom-out')
         self._zoom_out.set_tooltip(_('Zoom Out'))
-        self._zoom_out_id = self._zoom_out.connect('clicked', self._zoom_out_cb)
+        self._zoom_out_id = self._zoom_out.connect(
+            'clicked', self._zoom_out_cb)
         self.insert(self._zoom_out, -1)
         self._zoom_out.show()
 
@@ -412,39 +413,39 @@ class ParagraphToolbar(Gtk.Toolbar):
         group = None
 
         group = append_style('list-none', _('Normal'),
-                lambda:
-                    abi.set_style('Normal'),
-                lambda abi, style:
-                    style not in ['Heading 1',
-                                  'Heading 2',
-                                  'Heading 3',
-                                  'Heading 4',
-                                  'Block Text',
-                                  'Plain Text'])
+                             lambda:
+                             abi.set_style('Normal'),
+                             lambda abi, style:
+                             style not in ['Heading 1',
+                                           'Heading 2',
+                                           'Heading 3',
+                                           'Heading 4',
+                                           'Block Text',
+                                           'Plain Text'])
 
         append_style('paragraph-h1', _('Heading 1'),
-                lambda: abi.set_style('Heading 1'),
-                lambda abi, style: style == 'Heading 1')
+                     lambda: abi.set_style('Heading 1'),
+                     lambda abi, style: style == 'Heading 1')
 
         append_style('paragraph-h2', _('Heading 2'),
-                lambda: abi.set_style('Heading 2'),
-                lambda abi, style: style == 'Heading 2')
+                     lambda: abi.set_style('Heading 2'),
+                     lambda abi, style: style == 'Heading 2')
 
         append_style('paragraph-h3', _('Heading 3'),
-                lambda: abi.set_style('Heading 3'),
-                lambda abi, style: style == 'Heading 3')
+                     lambda: abi.set_style('Heading 3'),
+                     lambda abi, style: style == 'Heading 3')
 
         append_style('paragraph-h4', _('Heading 4'),
-                lambda: abi.set_style('Heading 4'),
-                lambda abi, style: style == 'Heading 4')
+                     lambda: abi.set_style('Heading 4'),
+                     lambda abi, style: style == 'Heading 4')
 
         append_style('paragraph-blocktext', _('Block Text'),
-                lambda: abi.set_style('Block Text'),
-                lambda abi, style: style == 'Block Text')
+                     lambda: abi.set_style('Block Text'),
+                     lambda abi, style: style == 'Block Text')
 
         append_style('paragraph-plaintext', _('Plain Text'),
-                lambda: abi.set_style('Plain Text'),
-                lambda abi, style: style == 'Plain Text')
+                     lambda: abi.set_style('Plain Text'),
+                     lambda abi, style: style == 'Plain Text')
 
         self.insert(Gtk.SeparatorToolItem(), -1)
 
@@ -459,18 +460,19 @@ class ParagraphToolbar(Gtk.Toolbar):
         group = None
 
         group = append_align('format-justify-left', _('Left justify'),
-                abi.align_left, 'left-align')
+                             abi.align_left, 'left-align')
 
         append_align('format-justify-center', _('Center justify'),
-                abi.align_center, 'center-align')
+                     abi.align_center, 'center-align')
 
         append_align('format-justify-right', _('Right justify'),
-                abi.align_right, 'right-align')
+                     abi.align_right, 'right-align')
 
         append_align('format-justify-fill', _('Fill justify'),
-                abi.align_justify, 'justify-align')
+                     abi.align_justify, 'justify-align')
 
         self.show_all()
+
 
 class ListToolbar(Gtk.Toolbar):
 
@@ -488,34 +490,33 @@ class ListToolbar(Gtk.Toolbar):
         group = None
 
         group = append('list-none', _('Normal'),
-                lambda:
-                    abi.set_style('Normal'),
-                lambda abi, style:
-                    style not in ['Bullet List',
-                                  'Dashed List',
-                                  'Numbered List',
-                                  'Lower Case List',
-                                  'Upper Case List'])
+                       lambda:
+                       abi.set_style('Normal'),
+                       lambda abi, style:
+                       style not in ['Bullet List',
+                                     'Dashed List',
+                                     'Numbered List',
+                                     'Lower Case List',
+                                     'Upper Case List'])
 
         append('list-bullet', _('Bullet List'),
-                lambda: abi.set_style('Bullet List'),
-                lambda abi, style: style == 'Bullet List')
+               lambda: abi.set_style('Bullet List'),
+               lambda abi, style: style == 'Bullet List')
 
         append('list-dashed', _('Dashed List'),
-                lambda: abi.set_style('Dashed List'),
-                lambda abi, style: style == 'Dashed List')
+               lambda: abi.set_style('Dashed List'),
+               lambda abi, style: style == 'Dashed List')
 
         append('list-numbered', _('Numbered List'),
-                lambda: abi.set_style('Numbered List'),
-                lambda abi, style: style == 'Numbered List')
+               lambda: abi.set_style('Numbered List'),
+               lambda abi, style: style == 'Numbered List')
 
         append('list-lower-case', _('Lower Case List'),
-                lambda: abi.set_style('Lower Case List'),
-                lambda abi, style: style == 'Lower Case List')
+               lambda: abi.set_style('Lower Case List'),
+               lambda abi, style: style == 'Lower Case List')
 
         append('list-upper-case', _('Upper Case List'),
-                lambda: abi.set_style('Upper Case List'),
-                lambda abi, style: style == 'Upper Case List')
+               lambda: abi.set_style('Upper Case List'),
+               lambda abi, style: style == 'Upper Case List')
 
         self.show_all()
-

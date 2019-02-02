@@ -36,7 +36,7 @@ class FontCombo(ComboBox):
         self._has_custom_fonts = False
         self._fonts = sorted(abi.get_font_names())
         self._fonts_changed_id = self.connect('changed', self._font_changed_cb,
-                abi)
+                                              abi)
 
         for i, f in enumerate(self._fonts):
             self.append_item(i, f, None)
@@ -69,7 +69,7 @@ class FontCombo(ComboBox):
             if not self._has_custom_fonts:
                 # add a separator to seperate the non-available fonts from
                 # the available ones
-                self._fonts.append('') # ugly
+                self._fonts.append('')  # ugly
                 self.append_separator()
                 self._has_custom_fonts = True
             # add the new font
@@ -79,7 +79,7 @@ class FontCombo(ComboBox):
             model = self.get_model()
             num_children = model.iter_n_children(None)
             logger.debug('Number of fonts in the list: %d', num_children)
-            font_index = num_children-1
+            font_index = num_children - 1
 
         # activate the found font
         if (font_index > -1):
@@ -95,10 +95,10 @@ class FontSizeCombo(ComboBox):
 
         self._abi_handler = abi.connect('font-size', self._font_size_cb)
 
-        self._font_sizes = ['8', '9', '10', '11', '12', '14', '16', '20', \
+        self._font_sizes = ['8', '9', '10', '11', '12', '14', '16', '20',
                             '22', '24', '26', '28', '36', '48', '72']
         self._changed_id = self.connect('changed', self._font_size_changed_cb,
-                abi)
+                                        abi)
 
         for i, s in enumerate(self._font_sizes):
             self.append_item(i, s, None)
@@ -108,7 +108,7 @@ class FontSizeCombo(ComboBox):
     def _font_size_changed_cb(self, combobox, abi):
         if self.get_active() != -1:
             logger.debug('Setting font size: %d',
-                    int(self._font_sizes[self.get_active()]))
+                         int(self._font_sizes[self.get_active()]))
 
             abi.handler_block(self._abi_handler)
             try:
@@ -131,9 +131,9 @@ class AbiButton(RadioToolButton):
         RadioToolButton.__init__(self, **kwargs)
 
         self._abi_handler = abi.connect(abi_signal, self.__abi_cb,
-                abi_signal, on_abi_cb)
+                                        abi_signal, on_abi_cb)
         self._toggled_handler = self.connect('toggled', self.__toggled_cb,
-                abi, do_abi_cb)
+                                             abi, do_abi_cb)
 
     def __toggled_cb(self, button, abi, do_abi_cb):
         if not button.props.active:
@@ -161,21 +161,21 @@ class AbiButton(RadioToolButton):
 
 class ExportButton(ToolButton):
 
-    _EXPORT_FORMATS = [{'mime_type' : 'application/rtf',
-                        'title'     : _('Rich Text (RTF)'),
-                        'jpostfix'  : _('RTF'),
-                        'exp_props' : ''},
+    _EXPORT_FORMATS = [{'mime_type': 'application/rtf',
+                        'title': _('Rich Text (RTF)'),
+                        'jpostfix': _('RTF'),
+                        'exp_props': ''},
 
-                       {'mime_type' : 'text/html',
-                        'title'     : _('Hypertext (HTML)'),
-                        'jpostfix'  : _('HTML'),
-                        'exp_props' : 'html4:yes; declare-xml:no; ' \
-                                      'embed-css:yes; embed-images:yes;'},
+                       {'mime_type': 'text/html',
+                        'title': _('Hypertext (HTML)'),
+                        'jpostfix': _('HTML'),
+                        'exp_props': 'html4:yes; declare-xml:no; '
+                        'embed-css:yes; embed-images:yes;'},
 
-                       {'mime_type' : 'text/plain',
-                        'title'     : _('Plain Text (TXT)'),
-                        'jpostfix'  : _('TXT'),
-                        'exp_props' : ''}]
+                       {'mime_type': 'text/plain',
+                        'title': _('Plain Text (TXT)'),
+                        'jpostfix': _('TXT'),
+                        'exp_props': ''}]
 
     def __init__(self, activity, abi):
         ToolButton.__init__(self, 'document-save')
@@ -207,11 +207,13 @@ class ExportButton(ToolButton):
         fileObject = datastore.create()
         act_meta = activity.metadata
         fileObject.metadata['title'] = \
-                act_meta['title'] + ' (' + format['jpostfix'] + ')'
-        fileObject.metadata['title_set_by_user'] = act_meta['title_set_by_user']
+            act_meta['title'] + ' (' + format['jpostfix'] + ')'
+        fileObject.metadata[
+            'title_set_by_user'] = act_meta[
+                'title_set_by_user']
         fileObject.metadata['mime_type'] = format['mime_type']
         fileObject.metadata['fulltext'] = abi.get_content(
-                extension_or_mimetype=".txt")[:3000]
+            extension_or_mimetype=".txt")[:3000]
 
         fileObject.metadata['icon-color'] = act_meta['icon-color']
         fileObject.metadata['activity'] = act_meta['activity']
@@ -225,12 +227,11 @@ class ExportButton(ToolButton):
 
         # write out the document contents in the requested format
         fileObject.file_path = os.path.join(activity.get_activity_root(),
-                'instance', '%i' % time.time())
+                                            'instance', '%i' % time.time())
         abi.save('file://' + fileObject.file_path,
-                format['mime_type'], exp_props)
+                 format['mime_type'], exp_props)
 
         # store the journal item
         datastore.write(fileObject, transfer_ownership=True)
         fileObject.destroy()
         del fileObject
-

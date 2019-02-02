@@ -21,17 +21,17 @@ from gi.repository import Gtk
 from sugar3 import mime
 from sugar3.graphics.objectchooser import ObjectChooser
 
-TEXT  = hasattr(mime, 'GENERIC_TYPE_TEXT') and mime.GENERIC_TYPE_TEXT or None
+TEXT = hasattr(mime, 'GENERIC_TYPE_TEXT') and mime.GENERIC_TYPE_TEXT or None
 IMAGE = hasattr(mime, 'GENERIC_TYPE_IMAGE') and mime.GENERIC_TYPE_IMAGE or None
 AUDIO = hasattr(mime, 'GENERIC_TYPE_AUDIO') and mime.GENERIC_TYPE_AUDIO or None
 VIDEO = hasattr(mime, 'GENERIC_TYPE_VIDEO') and mime.GENERIC_TYPE_VIDEO or None
-LINK  = hasattr(mime, 'GENERIC_TYPE_LINK') and mime.GENERIC_TYPE_LINK or None
+LINK = hasattr(mime, 'GENERIC_TYPE_LINK') and mime.GENERIC_TYPE_LINK or None
 
 
 def pick(cb=None, default=None, parent=None, what=None):
     """
     Opens object chooser.
-    
+
     Method returns:
 
         * cb(jobject), if object was choosen and cb is not None
@@ -68,4 +68,3 @@ def pick(cb=None, default=None, parent=None, what=None):
         return out
     else:
         return default
-
