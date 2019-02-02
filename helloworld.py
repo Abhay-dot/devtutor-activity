@@ -16,7 +16,6 @@
 
 """HelloWorld Activity: A case study for developing an activity."""
 
-import logging
 import os
 from gettext import gettext as _
 

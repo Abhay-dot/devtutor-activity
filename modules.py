@@ -14,9 +14,6 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-import logging
-import os
-import subprocess
 
 from gettext import gettext as _
 
@@ -24,7 +21,6 @@ from gi.repository import Gtk
 from gi.repository import Pango
 from gi.repository import GObject
 
-from sugar3.activity import activity
 from sugar3.graphics.toolbarbox import ToolbarBox
 from sugar3.activity.widgets import *
 

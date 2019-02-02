@@ -49,7 +49,6 @@ SERVICE = "org.laptop.DevTutor"
 IFACE = SERVICE
 PATH = "/org/laptop/DevTutor"
 
-from helloworld import HelloWorldActivity
 from modules import ShowModules
 from AbiWordActivity import *
 

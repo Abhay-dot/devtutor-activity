@@ -19,7 +19,6 @@
 from gettext import gettext as _
 import logging
 
-from gi.repository import Gdk
 from gi.repository import Gtk
 
 from sugar3.graphics.toolbutton import ToolButton

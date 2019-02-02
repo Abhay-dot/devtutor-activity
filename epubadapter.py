@@ -5,7 +5,6 @@ import sys
 sys.path.append(os.path.join(os.environ['SUGAR_BUNDLE_PATH'], 'epubview'))
 import epubview
 
-from gi.repository import Gtk
 
 _logger = logging.getLogger('read-activity')
 
