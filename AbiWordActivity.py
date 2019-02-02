@@ -21,6 +21,9 @@ import logging
 import os
 
 # Abiword needs this to happen as soon as possible
+import gi
+gi.require_version('Abi', '3.0')
+
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import Abi
