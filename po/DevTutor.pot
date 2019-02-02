@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-28 23:21+0530\n"
+"POT-Creation-Date: 2019-02-02 15:42+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,273 +21,259 @@ msgstr ""
 msgid "DevTutor"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/helloworld.py:90
-msgid "Hello World!"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:91
+#: AbiWordActivity.py:94
 msgid "Edit"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:97
+#: AbiWordActivity.py:100
 msgid "View"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:111
+#: AbiWordActivity.py:114
 msgid "Text"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:117
+#: AbiWordActivity.py:120
 msgid "Paragraph"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:123
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:490
+#: AbiWordActivity.py:126 toolbar.py:500
 msgid "Bullet List"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:129
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:185
+#: AbiWordActivity.py:132 toolbar.py:188
 msgid "Table"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:136
+#: AbiWordActivity.py:139
 msgid "Bold"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:144
+#: AbiWordActivity.py:147
 msgid "Italic"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/AbiWordActivity.py:152
+#: AbiWordActivity.py:155
 msgid "Underline"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:168
+#: activities.py:96 activity.py:209
 msgid "Hello World activity step 1 - call activity.__init__"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:187
+#: activities.py:115 activity.py:228
 msgid "Hello Word activity step 2 - add toolbox"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:206
+#: activities.py:134 activity.py:247
 msgid "Hello World activity step 3 - add hello world label"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:225
+#: activities.py:153 activity.py:266
 msgid "Hello World activity step 4 - add rotate button"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:252
+#: activities.py:196 activity.py:292
 msgid "Write activity step 1 "
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:270
+#: activities.py:214 activity.py:310
 msgid "Write activity step 2"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:290
+#: activities.py:234 activity.py:330
 msgid "Write activity step 3"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/activity.py:346
+#: activity.py:531
 msgid "Back"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:89
-msgid "Search"
+#: helloworld.py:88
+msgid "Hello World!"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:106
-msgid "Find previous"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:112
-msgid "Find next"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:185
-msgid "Cancel"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:197
-msgid "Insert Row"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:203
-msgid "Delete Row"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:209
-msgid "Insert Column"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:215
-msgid "Delete Column"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:224
-msgid "Insert Image"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:268
-msgid "Zoom Out"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:274
-msgid "Zoom In"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:291
-msgid "%"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:303
-msgid "Page: "
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:405
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:480
-msgid "Normal"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:416
-msgid "Heading 1"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:420
-msgid "Heading 2"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:424
-msgid "Heading 3"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:428
-msgid "Heading 4"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:432
-msgid "Block Text"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:436
-msgid "Plain Text"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:452
-msgid "Left justify"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:455
-msgid "Center justify"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:458
-msgid "Right justify"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:461
-msgid "Fill justify"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:494
-msgid "Dashed List"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:498
-msgid "Numbered List"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:502
-msgid "Lower Case List"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/toolbar.py:506
-msgid "Upper Case List"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:157
-msgid "Rich Text (RTF)"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:158
-msgid "RTF"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:162
-msgid "Hypertext (HTML)"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:163
-msgid "HTML"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:168
-msgid "Plain Text (TXT)"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:169
-msgid "TXT"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:174
-#: /home/kandarp/Desktop/mainline ( with write and modules)/widgets.py:175
-msgid "Export"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:203
+#: modules.py:199
 msgid "Module/Method"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:207
+#: modules.py:203
 msgid "GUI"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:211
+#: modules.py:207
 msgid "Description"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:222
+#: modules.py:217
 msgid "sugar.activity.widgets.StopButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:234
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:257
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:279
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:301
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:323
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:345
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:367
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:389
+#: modules.py:229 modules.py:251 modules.py:273 modules.py:295 modules.py:317
+#: modules.py:339 modules.py:361
 msgid "Some Description"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:245
+#: modules.py:239
 msgid "sugar.activity.widgets.ActivityButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:267
-msgid "sugar.activity.widgets.KeepButton()"
-msgstr ""
-
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:289
+#: modules.py:261
 msgid "sugar.activity.widgets.ShareButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:311
+#: modules.py:283
 msgid "sugar.activity.widgets.RedoButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:333
+#: modules.py:305
 msgid "sugar.activity.widgets.UndoButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:355
+#: modules.py:327
 msgid "sugar.activity.widgets.CopyButton()"
 msgstr ""
 
-#: /home/kandarp/Desktop/mainline ( with write and modules)/modules.py:377
+#: modules.py:349
 msgid "sugar.activity.widgets.PasteButton()"
+msgstr ""
+
+#: toolbar.py:90
+msgid "Search"
+msgstr ""
+
+#: toolbar.py:107
+msgid "Find previous"
+msgstr ""
+
+#: toolbar.py:113
+msgid "Find next"
+msgstr ""
+
+#: toolbar.py:188
+msgid "Cancel"
+msgstr ""
+
+#: toolbar.py:200
+msgid "Insert Row"
+msgstr ""
+
+#: toolbar.py:206
+msgid "Delete Row"
+msgstr ""
+
+#: toolbar.py:212
+msgid "Insert Column"
+msgstr ""
+
+#: toolbar.py:218
+msgid "Delete Column"
+msgstr ""
+
+#: toolbar.py:227
+msgid "Insert Image"
+msgstr ""
+
+#: toolbar.py:273
+msgid "Zoom Out"
+msgstr ""
+
+#: toolbar.py:279
+msgid "Zoom In"
+msgstr ""
+
+#: toolbar.py:296
+msgid "%"
+msgstr ""
+
+#: toolbar.py:308
+msgid "Page: "
+msgstr ""
+
+#: toolbar.py:414 toolbar.py:490
+msgid "Normal"
+msgstr ""
+
+#: toolbar.py:425
+msgid "Heading 1"
+msgstr ""
+
+#: toolbar.py:429
+msgid "Heading 2"
+msgstr ""
+
+#: toolbar.py:433
+msgid "Heading 3"
+msgstr ""
+
+#: toolbar.py:437
+msgid "Heading 4"
+msgstr ""
+
+#: toolbar.py:441
+msgid "Block Text"
+msgstr ""
+
+#: toolbar.py:445
+msgid "Plain Text"
+msgstr ""
+
+#: toolbar.py:461
+msgid "Left justify"
+msgstr ""
+
+#: toolbar.py:464
+msgid "Center justify"
+msgstr ""
+
+#: toolbar.py:467
+msgid "Right justify"
+msgstr ""
+
+#: toolbar.py:470
+msgid "Fill justify"
+msgstr ""
+
+#: toolbar.py:504
+msgid "Dashed List"
+msgstr ""
+
+#: toolbar.py:508
+msgid "Numbered List"
+msgstr ""
+
+#: toolbar.py:512
+msgid "Lower Case List"
+msgstr ""
+
+#: toolbar.py:516
+msgid "Upper Case List"
+msgstr ""
+
+#: widgets.py:165
+msgid "Rich Text (RTF)"
+msgstr ""
+
+#: widgets.py:166
+msgid "RTF"
+msgstr ""
+
+#: widgets.py:170
+msgid "Hypertext (HTML)"
+msgstr ""
+
+#: widgets.py:171
+msgid "HTML"
+msgstr ""
+
+#: widgets.py:176
+msgid "Plain Text (TXT)"
+msgstr ""
+
+#: widgets.py:177
+msgid "TXT"
+msgstr ""
+
+#: widgets.py:182 widgets.py:183
+msgid "Export"
 msgstr ""
