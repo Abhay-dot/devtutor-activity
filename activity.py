@@ -26,10 +26,9 @@ from gettext import gettext as _
 
 import gi
 gi.require_version('Gtk', '3.0')
-gi.require_version('GConf', '2.0')
 
 from gi.repository import Gtk
-from gi.repository import GConf
+from gi.repository import Gio
 from gi.repository import Pango
 
 from dbus.service import method, signal
@@ -634,6 +633,6 @@ class TextSync(ExportedGObject):
         """Send some text to all participants."""
         self.text = text
         self._logger.debug('Sent text: %s', text)
-        client = GConf.Client.get_default()
-        Text = client.get_string("/desktop/sugar/user/nick")
+        settings = Gio.Settings('org.sugarlabs.user')
+        Text = settings.get_string("nick")
         self._alert(Text, '%s' % text)
