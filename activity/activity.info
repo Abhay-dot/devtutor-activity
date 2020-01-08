@@ -2,6 +2,6 @@
 name = DevTutor
 activity_version = 1
 bundle_id = org.sugarlabs.DevTutor
-exec = sugar-activity activity.DevTutorActivity
+exec = sugar-activity3 activity.DevTutorActivity
 icon = activity-helloworld
 license = GPLv2+
